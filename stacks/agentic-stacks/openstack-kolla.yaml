@@ -1,0 +1,41 @@
+name: openstack-kolla
+owner: agentic-stacks
+version: 2026.0331.2
+category: platform
+repository: https://github.com/agentic-stacks/openstack-kolla
+tag: v2026.0331.2
+description: 'Agent-driven OpenStack cloud deployment and operations using kolla-ansible.
+  Covers the full lifecycle: configuration, deployment, health checking, troubleshooting,
+  and day-two operations on Rocky Linux 10+ and Ubuntu 24.04.'
+target:
+  software: openstack
+  versions:
+  - '2025.1'
+  - '2025.2'
+skills:
+- name: config-build
+  description: Build globals.yml, inventory, and service configs from operator requirements
+- name: deploy
+  description: Full kolla-ansible deploy lifecycle — bootstrap, prechecks, pull, deploy,
+    post-deploy
+- name: health-check
+  description: Validate environment health — APIs, agents, containers, networking
+- name: diagnose
+  description: Systematic troubleshooting — logs, configs, container state, infrastructure
+- name: day-two
+  description: Day-two operations — add compute, reconfigure, upgrade, enable services
+- name: decision-guides
+  description: Choose between networking modes (OVN/OVS/LinuxBridge) and storage backends
+    (Ceph/LVM/NFS)
+- name: compatibility
+  description: Version compatibility matrix — OpenStack release × distro × networking
+    × storage
+- name: known-issues
+  description: Known bugs and workarounds for supported OpenStack releases
+depends_on: []
+requires:
+  tools:
+  - kolla-ansible
+  - openstack
+  - docker
+  python: '>=3.11'

@@ -1,0 +1,61 @@
+name: prometheus-grafana
+owner: agentic-stacks
+version: 2026.0401.1
+category: observability
+repository: https://github.com/agentic-stacks/prometheus-grafana
+tag: v2026.0401.1
+description: Monitoring stack — teaches AI agents to deploy, configure, operate, and
+  troubleshoot Prometheus metrics collection, Grafana dashboards, Alertmanager notifications,
+  and the exporter ecosystem.
+target:
+  software: prometheus-grafana
+  versions:
+  - prometheus-3.x
+  - prometheus-2.x
+  - grafana-12.x
+  - grafana-11.x
+skills:
+- name: concepts
+  description: Metrics model, time series, labels, metric types, PromQL preview
+- name: architecture
+  description: Component overview, data flow, network requirements, deployment patterns
+- name: prometheus
+  description: Install and configure Prometheus server (binary, Docker, Helm)
+- name: grafana
+  description: Install and configure Grafana (package, Docker, Helm)
+- name: alertmanager
+  description: Install and configure Alertmanager, routing, receivers
+- name: exporters
+  description: node_exporter setup, common exporters reference, Pushgateway
+- name: promql
+  description: PromQL query language — selectors, operators, functions, examples
+- name: dashboards
+  description: Grafana dashboards — panels, variables, provisioning, as code
+- name: alerting
+  description: Alert rules (Prometheus and Grafana), notification channels
+- name: recording-rules
+  description: Recording rules for performance and aggregation
+- name: storage
+  description: TSDB, retention, remote write/read, federation
+- name: upgrades
+  description: Upgrade procedures for Prometheus, Grafana, Alertmanager
+- name: prometheus-diagnose
+  description: Troubleshoot targets, cardinality, OOM, WAL, config errors
+- name: grafana-diagnose
+  description: Troubleshoot datasource, auth, performance, plugin issues
+- name: alertmanager-diagnose
+  description: Troubleshoot routing, notifications, silences, clustering
+- name: known-issues
+  description: Version-specific issues and breaking changes
+- name: compatibility
+  description: Version compatibility matrix for all components
+- name: best-practices
+  description: Naming, instrumentation, histogram, alerting, dashboard best practices
+depends_on: []
+requires:
+  tools:
+  - promtool
+  - amtool
+  - docker
+  - helm
+  - kubectl

@@ -1,0 +1,55 @@
+name: ceph
+owner: agentic-stacks
+version: 2026.0331.2
+category: storage
+repository: https://github.com/agentic-stacks/ceph
+tag: v2026.0331.2
+description: Complete operational knowledge for deploying, managing, and operating
+  production Ceph storage clusters using cephadm on bare metal. Covers RBD, CephFS,
+  and RGW services across Ceph Reef (18.2.x) and Squid (19.2.x).
+target:
+  software: ceph
+  versions:
+  - 18.2.x
+  - 19.2.x
+skills:
+- name: concepts
+  description: Ceph architecture, CRUSH maps, placement groups, pools, BlueStore
+- name: hardware-planning
+  description: Disk sizing, CPU/RAM ratios, network bandwidth, node role planning
+- name: host-preparation
+  description: OS prerequisites, NTP, firewall ports, container runtime, cephadm install
+- name: bootstrap
+  description: cephadm bootstrap, initial MON/MGR/OSD deployment, dashboard setup
+- name: networking
+  description: Public vs cluster network design, VLAN, bonding, MTU configuration
+- name: services
+  description: RBD pool creation, CephFS/MDS deployment, RGW S3 gateway setup
+- name: health-check
+  description: Cluster health interpretation, OSD states, PG states, alert triage
+- name: scaling
+  description: Add/remove OSDs and hosts, expand services, rebalance
+- name: upgrades
+  description: Rolling upgrades within and across Reef/Squid versions
+- name: backup-restore
+  description: Pool snapshots, RBD mirroring, RGW multisite, disaster recovery
+- name: pool-management
+  description: CRUSH rules, erasure coding profiles, tiering, quotas
+- name: certificate-mgmt
+  description: Dashboard TLS, RGW TLS, internal messenger encryption
+- name: troubleshooting
+  description: Symptom-based diagnostic trees for common Ceph failure modes
+- name: performance
+  description: Benchmarking with rados bench/fio, slow OSD diagnosis, bottleneck ID
+- name: known-issues
+  description: Version-specific bugs and workarounds for Reef and Squid
+- name: compatibility
+  description: Ceph version × kernel × container image × client compatibility
+- name: decision-guides
+  description: Replicated vs erasure coding, BlueStore tuning, network topology
+depends_on: []
+requires:
+  tools:
+  - cephadm
+  - ceph
+  - podman

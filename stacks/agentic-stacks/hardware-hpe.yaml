@@ -1,0 +1,54 @@
+name: hardware-hpe
+owner: agentic-stacks
+version: 2026.0331.1
+category: hardware
+repository: https://github.com/agentic-stacks/hardware-hpe
+tag: v2026.0331.1
+description: Complete operational knowledge for administering HPE ProLiant Gen10 and
+  Gen11 servers. Covers the full lifecycle — discovery, BIOS/RAID/network configuration,
+  firmware management, health monitoring, troubleshooting, and decommissioning — using
+  iLO RESTful API (Redfish), HPE OneView, and iLOrest CLI.
+target:
+  software: hpe-ilo
+  versions:
+  - iLO 5 (Gen10)
+  - iLO 6 (Gen11)
+skills:
+- name: concepts
+  description: iLO architecture, Redfish API model, OneView concepts, HPE terminology
+- name: connectivity
+  description: Connecting to iLO and OneView, iLOrest setup, inventory management
+- name: bios-uefi
+  description: BIOS/UEFI configuration, boot order, secure boot, performance profiles
+- name: storage
+  description: RAID configuration, Smart Array and MR/SR controllers, disk management
+- name: networking
+  description: NIC configuration, VLAN, PXE/HTTP boot, FlexibleLOM
+- name: firmware
+  description: SPP, firmware updates, baselines, compliance checking, rollback
+- name: health-check
+  description: Hardware health validation, sensors, IML/AHS log review
+- name: power-mgmt
+  description: Power on/off/reset, power capping, efficiency, UID LED
+- name: licensing
+  description: iLO Standard/Advanced/Premium licensing and feature activation
+- name: remote-console
+  description: Virtual media, remote console, OS provisioning preparation
+- name: lifecycle
+  description: Warranty, decommissioning, secure erase, asset tracking
+- name: troubleshooting
+  description: Symptom-based diagnostic decision trees for hardware issues
+- name: log-analysis
+  description: IML, AHS, and iLO event log interpretation
+- name: known-issues
+  description: Version-specific bugs and workarounds for iLO 5/6 and Gen10/Gen11
+- name: compatibility
+  description: Firmware and component compatibility matrices
+- name: decision-guides
+  description: RAID level selection, NIC config patterns, firmware update strategies
+depends_on: []
+requires:
+  tools:
+  - ilorest
+  - curl
+  - jq

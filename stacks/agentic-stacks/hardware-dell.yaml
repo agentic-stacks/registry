@@ -1,0 +1,71 @@
+name: hardware-dell
+owner: agentic-stacks
+version: 2026.0331.2
+category: hardware
+repository: https://github.com/agentic-stacks/hardware-dell
+tag: v2026.0331.2
+description: Teaches AI agents to manage Dell PowerEdge server hardware — BIOS configuration,
+  iDRAC remote management, RAID setup, firmware updates, and hardware inventory. Includes
+  a container-based toolkit (racadm, perccli, mvcli, Ansible OpenManage) so operators
+  can manage Dell servers from any OS without local tool installation.
+target:
+  software: Dell PowerEdge / iDRAC
+  versions:
+  - iDRAC9 (14G/15G/16G)
+  - iDRAC10 (17G)
+skills:
+- name: concepts
+  description: PowerEdge architecture, iDRAC fundamentals, server generations, license
+    tiers
+- name: tools
+  description: Tool landscape — racadm, perccli, mvcli, ipmitool, Ansible OpenManage,
+    local discovery
+- name: architecture
+  description: Container-based tooling approach — privileged vs remote, volume mounts,
+    networking
+- name: container-setup
+  description: Build and run the Dell tools container, verify tool availability
+- name: initial-config
+  description: First-time iDRAC setup — IP, password, NTP, DNS, baseline SCP export
+- name: bios
+  description: BIOS configuration — view, set, import/export via SCP, workload profiles
+- name: idrac
+  description: iDRAC management — SCP config-as-code, users, alerts, power, certificates,
+    licensing
+- name: raid
+  description: RAID management — perccli, mvcli, create/delete/rebuild, hot spares,
+    RAID level selection
+- name: firmware
+  description: Firmware updates — DUP, DSU, lifecycle controller, rollback, job queue,
+    update order
+- name: inventory
+  description: Hardware inventory — racadm, dmidecode, lspci, lshw, ipmitool sensors,
+    asset export
+- name: openmanage
+  description: Ansible dellemc.openmanage collection — playbooks for fleet-wide BIOS,
+    firmware, SCP operations
+- name: diagnose-hardware
+  description: Hardware failure diagnosis — power, LEDs, memory, CPU thermal, fans,
+    PSU
+- name: diagnose-connectivity
+  description: Network/iDRAC connectivity troubleshooting — unreachable iDRAC, NIC
+    issues, VLAN
+- name: diagnose-storage
+  description: Storage troubleshooting — foreign drives, rebuild, degraded arrays,
+    boot failures
+- name: known-issues
+  description: Version-specific bugs and workarounds for iDRAC firmware, racadm, PERC
+- name: compatibility
+  description: Compatibility matrices — PowerEdge generations, iDRAC versions, tool
+    support, Ansible
+- name: decision-guides
+  description: Decision aids — local vs remote, racadm vs Ansible, RAID levels, firmware
+    strategy
+- name: openmanage-migration
+  description: Migration guide for Ansible dellemc.openmanage collection 8.x to 9.x
+depends_on: []
+requires:
+  tools:
+  - docker
+  - docker-compose
+  - git

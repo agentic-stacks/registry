@@ -1,0 +1,15 @@
+name: terraform
+owner: agentic-stacks
+version: 2026.0401.1
+category: automation
+repository: https://github.com/agentic-stacks/terraform
+tag: v2026.0401.1
+description: Infrastructure as Code provisioning — providers, state, modules
+target:
+  software: terraform
+  versions: []
+skills: []
+depends_on: []
+requires:
+  tools: []
+  python: '>=3.11'

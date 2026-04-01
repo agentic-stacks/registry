@@ -1,0 +1,71 @@
+name: docker
+owner: agentic-stacks
+version: 2026.0331.2
+category: platform
+repository: https://github.com/agentic-stacks/docker
+tag: v2026.0331.2
+description: Complete operational knowledge for building, deploying, managing, and
+  troubleshooting production containerized applications using Docker Engine. Covers
+  the full lifecycle from Dockerfile authoring and image optimization through single-host
+  and Swarm deployments to day-two operations, security hardening, and disaster recovery.
+target:
+  software: docker
+  versions:
+  - 27.x
+skills:
+- name: concepts
+  description: Docker architecture, containerd, OCI runtimes, image layers, namespaces/cgroups
+- name: installation
+  description: Installing Docker Engine on Linux, macOS, Windows, post-install configuration
+- name: configuration
+  description: daemon.json settings, storage drivers, logging drivers, runtime configuration
+- name: dockerfile
+  description: Dockerfile syntax, instructions, multi-stage builds, best practices
+- name: compose
+  description: Compose file authoring, services, profiles, extends, variable interpolation
+- name: build-optimization
+  description: BuildKit, layer caching, .dockerignore, image size reduction, build
+    arguments
+- name: registry
+  description: Push/pull workflows, private registries, Harbor, ECR/GCR/ACR, image
+    signing
+- name: single-host
+  description: docker run, compose up, restart policies, resource constraints
+- name: swarm
+  description: Swarm init, services, stacks, overlay networking, rolling updates,
+    secrets
+- name: production
+  description: Reverse proxies, TLS termination, secrets management, resource limits,
+    logging
+- name: health-check
+  description: Container health checks, system health, docker events, monitoring integration
+- name: networking
+  description: Bridge, host, overlay, macvlan, DNS resolution, port mapping, network
+    troubleshooting
+- name: storage
+  description: Volumes, bind mounts, tmpfs, storage drivers, NFS, shared storage
+- name: security
+  description: Rootless mode, user namespaces, seccomp, AppArmor, image scanning,
+    CIS benchmarks
+- name: upgrades
+  description: Docker Engine upgrades, image update strategies, zero-downtime redeployment
+- name: backup-restore
+  description: Volume backup, container export/import, Swarm state backup, disaster
+    recovery
+- name: troubleshooting
+  description: Symptom-based diagnostic decision trees for common Docker issues
+- name: cli-reference
+  description: Essential docker and docker compose CLI patterns and one-liners
+- name: known-issues
+  description: Docker 27.x specific bugs, caveats, and workarounds
+- name: compatibility
+  description: OS, kernel, storage driver, and runtime compatibility matrices
+- name: decision-guides
+  description: Trade-off analyses for storage drivers, networking modes, orchestration,
+    registries
+depends_on: []
+requires:
+  tools:
+  - docker
+  - docker-compose
+  - buildx

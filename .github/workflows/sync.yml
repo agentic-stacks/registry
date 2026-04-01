@@ -1,0 +1,85 @@
+name: Sync Formulas
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # hourly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Sync formulas
+        run: python scripts/sync_formulas.py --org agentic-stacks --output . --token ${{ secrets.ORG_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add stacks/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync formulas from org repos"
+            git push
+          fi
+
+      - name: Tag stack repos
+        run: python scripts/tag_stacks.py --input ./stacks --token ${{ secrets.ORG_TOKEN }}
+
+      - name: Commit version updates
+        run: |
+          git add stacks/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update formula versions from tags"
+            git push
+          fi
+
+      - name: Update README tables
+        env:
+          GH_TOKEN: ${{ secrets.ORG_TOKEN }}
+        run: |
+          git clone https://x-access-token:${GH_TOKEN}@github.com/agentic-stacks/.github /tmp/dotgithub
+          git clone https://x-access-token:${GH_TOKEN}@github.com/agentic-stacks/agentic-stacks /tmp/main-repo
+          python scripts/update_readmes.py --input ./stacks --dotgithub /tmp/dotgithub --main /tmp/main-repo
+
+          cd /tmp/dotgithub
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update stack catalog table"
+            git push
+          fi
+
+          cd /tmp/main-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update stack catalog table in README"
+            git push
+          fi
+
+      - name: Trigger website deploy
+        env:
+          GH_TOKEN: ${{ secrets.ORG_TOKEN }}
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${GH_TOKEN}" \
+            https://api.github.com/repos/agentic-stacks/agentic-stacks/actions/workflows/deploy.yml/dispatches \
+            -d '{"ref":"main"}'
+          echo "Triggered deploy workflow"

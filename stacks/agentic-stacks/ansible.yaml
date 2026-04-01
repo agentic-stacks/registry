@@ -1,0 +1,58 @@
+name: ansible
+owner: agentic-stacks
+version: 2026.0401.3
+category: automation
+repository: https://github.com/agentic-stacks/ansible
+tag: v2026.0401.3
+description: Fleet automation — teaches agents to write, deploy, test, and troubleshoot
+  Ansible automation. Covers ansible-core 2.16–2.17 and Ansible community package
+  9.x–10.x. From first playbook to fleet-scale operations.
+target:
+  software: ansible
+  versions:
+  - ansible-core 2.16
+  - ansible-core 2.17
+  - ansible 9.x
+  - ansible 10.x
+skills:
+- name: concepts
+  description: How Ansible works — control node, push model, idempotency, facts
+- name: installation
+  description: Installing ansible-core and community package via pip, OS packages,
+    venvs
+- name: configuration
+  description: ansible.cfg precedence, directory layout, callback plugins
+- name: inventory
+  description: Static and dynamic inventory — groups, patterns, plugins, auto-discovery
+- name: playbooks
+  description: Writing playbooks — variables, handlers, conditionals, templates, Jinja2
+- name: roles
+  description: Role structure, defaults, dependencies, Galaxy, creation best practices
+- name: collections
+  description: Namespaces, installing, requirements.yml, building and publishing
+- name: modules
+  description: Core modules reference, custom module patterns, return values
+- name: vault
+  description: Encrypt/decrypt secrets, vault IDs, multi-password, CI/CD integration
+- name: testing
+  description: Molecule, ansible-lint, ansible-test — full testing pipeline
+- name: performance
+  description: Forks, pipelining, strategy plugins, fact caching, SSH multiplexing
+- name: upgrades
+  description: Version migration, deprecation handling, changelog review
+- name: troubleshooting
+  description: Symptom-based decision trees — connection, execution, performance issues
+- name: known-issues
+  description: Version-specific bugs and workarounds for ansible-core 2.16–2.17
+- name: decision-guides
+  description: AWX vs CLI, strategy selection guides
+- name: compatibility
+  description: Python version matrix, collection compat, OS support
+depends_on: []
+requires:
+  tools:
+  - ansible
+  - python
+  - molecule
+  - ansible-lint
+  python: '>=3.11'

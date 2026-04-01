@@ -1,0 +1,93 @@
+name: frr
+owner: agentic-stacks
+version: 2026.0331.2
+category: networking
+repository: https://github.com/agentic-stacks/frr
+tag: v2026.0331.2
+description: Teaches AI agents to deploy, configure, operate, troubleshoot, and develop
+  FRR (Free Range Routing). Covers all routing protocols (BGP, OSPF, IS-IS, RIP, PIM,
+  LDP, BFD, Babel, PBR, OpenFabric, VRRP, EIGRP, NHRP), multiple deployment models
+  (package, container, source), day-two operations, and FRR codebase development.
+target:
+  software: frr
+  versions:
+  - 10.x
+  - 9.x
+skills:
+- name: architecture
+  description: FRR architecture — zebra, daemon model, IPC, routing table lifecycle
+- name: configuration
+  description: vtysh, integrated config, config reload, daemons.conf
+- name: daemons
+  description: Daemon roles, lifecycle, and zebra registration
+- name: package
+  description: Install FRR from distro packages (apt, yum, dnf)
+- name: container
+  description: Run FRR in Docker/Podman containers
+- name: source
+  description: Build FRR from source with full dependencies
+- name: initial-setup
+  description: Post-install daemon enablement, kernel params, interface setup
+- name: bgp
+  description: BGP sessions, policies, communities, EVPN, route reflectors
+- name: ospf
+  description: OSPFv2/v3 areas, stub/NSSA, authentication, graceful restart
+- name: isis
+  description: IS-IS levels, NET addressing, segment routing
+- name: rip
+  description: RIPv2/RIPng configuration and redistribution
+- name: pim
+  description: PIM-SM/SSM, RP config, IGMP, multicast routing
+- name: ldp
+  description: LDP MPLS label distribution and targeted sessions
+- name: bfd
+  description: BFD fast failure detection, protocol integration
+- name: babel
+  description: Babel mesh and wireless routing
+- name: pbr
+  description: Policy-based routing rules and nexthop groups
+- name: openfabric
+  description: OpenFabric data center fabric routing
+- name: vrrp
+  description: VRRP virtual router redundancy
+- name: eigrp
+  description: EIGRP configuration (alpha status)
+- name: nhrp
+  description: NHRP and DMVPN hub-and-spoke (alpha status)
+- name: codebase
+  description: FRR repo structure, key modules, coding style
+- name: building
+  description: Build system, configure options, developer builds
+- name: testing
+  description: Unit tests, topotests, CI pipeline
+- name: contributing
+  description: Contribution workflow, PR process, commit conventions
+- name: health-check
+  description: Daemon status, neighbor state, route table verification
+- name: upgrades
+  description: Version upgrade procedures, rollback, migration
+- name: backup-restore
+  description: Config backup, restore, disaster recovery
+- name: monitoring
+  description: SNMP, BMP, logging, prometheus metrics
+- name: performance
+  description: Route scale, convergence tuning, memory/CPU profiling
+- name: troubleshooting
+  description: Symptom-based decision trees for common FRR issues
+- name: debugging
+  description: FRR debug commands, log levels, packet captures
+- name: route-policy
+  description: Route maps, prefix lists, community lists, AS path ACLs
+- name: known-issues
+  description: Per-version known bugs and workarounds
+- name: compatibility
+  description: Kernel requirements, platform support, version matrix
+- name: decision-guides
+  description: Protocol selection and deployment model guidance
+depends_on: []
+requires:
+  tools:
+  - vtysh
+  - frr (systemd service)
+  - docker
+  - git

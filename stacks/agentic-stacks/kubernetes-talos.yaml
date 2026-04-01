@@ -1,0 +1,63 @@
+name: kubernetes-talos
+owner: agentic-stacks
+version: 2026.0331.2
+category: platform
+repository: https://github.com/agentic-stacks/kubernetes-talos
+tag: v2026.0331.2
+description: Complete operational knowledge for deploying, managing, and operating
+  production Kubernetes clusters using Talos Linux. Covers bare metal, virtualized,
+  and cloud deployments with full platform stack guidance.
+target:
+  software: talos-linux
+  versions:
+  - 1.9.x
+  - 1.8.x
+skills:
+- name: concepts
+  description: Talos architecture, immutable OS model, API-driven operations
+- name: machine-config
+  description: Generating, patching, and managing Talos machine configurations
+- name: infrastructure
+  description: Platform-specific provisioning (bare metal, VM, cloud)
+- name: bootstrap
+  description: Initial cluster creation, talosctl bootstrap, kubeconfig
+- name: networking
+  description: CNI selection, comparison, installation, and configuration
+- name: storage
+  description: CSI selection, comparison, installation, and configuration
+- name: gitops
+  description: Flux and ArgoCD bootstrap, repo structure, workflow patterns
+- name: ingress
+  description: Ingress controllers, cert-manager, TLS automation
+- name: observability
+  description: Monitoring, logging, tracing stack deployment
+- name: security
+  description: Policy engines, secrets management, RBAC, pod security
+- name: service-mesh
+  description: Service mesh options, installation, and configuration
+- name: health-check
+  description: Cluster and platform validation procedures
+- name: scaling
+  description: Adding/removing nodes, topology changes
+- name: upgrades
+  description: Talos, Kubernetes, and component rolling upgrade procedures
+- name: backup-restore
+  description: etcd backup, Velero, disaster recovery procedures
+- name: certificate-mgmt
+  description: Talos PKI, certificate rotation, expiry monitoring
+- name: troubleshooting
+  description: Symptom-based diagnostic decision trees
+- name: known-issues
+  description: Version-specific bugs, caveats, and workarounds
+- name: compatibility
+  description: Component compatibility matrices (CNI, CSI, K8s versions)
+- name: decision-guides
+  description: Trade-off matrices for choosing components
+depends_on: []
+requires:
+  tools:
+  - talosctl
+  - kubectl
+  - helm
+  - flux
+  - argocd

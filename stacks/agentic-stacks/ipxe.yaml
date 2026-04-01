@@ -1,0 +1,64 @@
+name: ipxe
+owner: agentic-stacks
+version: 2026.0331.2
+category: networking
+repository: https://github.com/agentic-stacks/ipxe
+tag: v2026.0331.2
+description: Teaches agents to build, deploy, and operate iPXE network boot infrastructure
+  across bare metal, virtual, and cloud environments. Covers building from source,
+  chainloading, ROM burning, DHCP integration, iPXE scripting, OS booting (Linux,
+  Windows, SAN), HTTPS/certificate security, and day-two operations.
+target:
+  software: ipxe
+  versions:
+  - rolling
+skills:
+- name: concepts
+  description: iPXE architecture, capabilities, and how it relates to PXE/gPXE
+- name: building
+  description: Building iPXE from source with dependencies and build options
+- name: configuration
+  description: Build-time config headers and feature toggles
+- name: chainloading
+  description: Deploy iPXE via PXE chainloading from existing TFTP infrastructure
+- name: rom-burning
+  description: Flash iPXE onto network card expansion ROM
+- name: media
+  description: Create bootable ISO and USB images
+- name: vmware
+  description: Replace VMware PXE ROM with iPXE
+- name: cloud
+  description: Deploy iPXE on AWS EC2 and Google Cloud
+- name: linux
+  description: Network boot Linux distributions via HTTP and TFTP
+- name: windows
+  description: Network boot Windows PE, WDS, and SCCM via HTTP
+- name: san
+  description: Boot from iSCSI, FCoE, and AoE storage area networks
+- name: dhcp
+  description: Configure ISC dhcpd and Microsoft DHCP for iPXE
+- name: scripting
+  description: Write, debug, and deploy iPXE boot scripts
+- name: security
+  description: HTTPS, custom CAs, code signing, and trust chains
+- name: troubleshooting
+  description: Diagnose boot failures, network issues, and script errors
+- name: console
+  description: Serial, syslog, framebuffer, and VMware console configuration
+- name: commands
+  description: Complete iPXE command reference
+- name: settings
+  description: All iPXE configuration settings by category
+- name: build-targets
+  description: Build target formats, platforms, and extensions
+- name: known-issues
+  description: Rolling-release bugs and workarounds tracked by commit/date
+depends_on: []
+requires:
+  tools:
+  - git
+  - make
+  - gcc
+  - lspci
+  - perl
+  - mtools
