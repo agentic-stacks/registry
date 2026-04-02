@@ -4,12 +4,50 @@ version: 2026.0401.1
 category: automation
 repository: https://github.com/agentic-stacks/terraform
 tag: v2026.0401.1
-description: Infrastructure as Code provisioning — providers, state, modules
+description: 'Infrastructure as Code provisioning — teaches AI agents to operate Terraform
+  and OpenTofu across the full lifecycle: project setup, provider configuration, state
+  management, modules, CI/CD integration, upgrades, and troubleshooting.'
 target:
   software: terraform
-  versions: []
-skills: []
+  versions:
+  - '>=1.5'
+skills:
+- name: concepts
+  description: HCL language, Terraform architecture, provider model, state model,
+    module system
+- name: project-structure
+  description: Workspace-based vs environment-directory patterns with decision guide
+- name: providers
+  description: Provider configuration, authentication, version pinning; AWS, GCP,
+    Azure guides
+- name: init-plan-apply
+  description: Core workflow — initialization, planning, applying, destroying
+- name: state-backends
+  description: Backend selection and configuration for S3, GCS, Azure Blob, TF Cloud,
+    PostgreSQL
+- name: modules-consuming
+  description: Finding, using, versioning, and pinning modules from registries
+- name: modules-authoring
+  description: Writing reusable modules, input/output design, testing, publishing
+- name: state-management
+  description: Import, move, remove, taint, replace, refresh operations
+- name: upgrades
+  description: Terraform/OpenTofu version upgrades and provider version migrations
+- name: drift-detection
+  description: Detecting and reconciling out-of-band infrastructure changes
+- name: ci-cd
+  description: Pipeline integration for GitHub Actions, GitLab CI, Atlantis, TF Cloud
+- name: common-errors
+  description: Symptom-based troubleshooting for frequent Terraform errors
+- name: state-recovery
+  description: Recovering from state corruption, lock conflicts, and lost state
+- name: known-issues
+  description: Version-specific bugs and workarounds for Terraform and OpenTofu
+- name: compatibility
+  description: Provider and Terraform/OpenTofu version compatibility matrices
+- name: decision-guides
+  description: Comparison guides for state backends, project layouts, and CI/CD platforms
 depends_on: []
 requires:
-  tools: []
-  python: '>=3.11'
+  tools:
+  - terraform
