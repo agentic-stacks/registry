@@ -81,13 +81,19 @@ def manifest_to_formula(manifest: dict[str, Any]) -> dict[str, Any]:
 
 
 def write_formulas(output_dir: pathlib.Path, formulas: list[dict]) -> None:
-    """Write formula YAML files to output_dir/stacks/<owner>/<name>.yaml."""
+    """Write formula YAML files to output_dir/stacks/<owner>/<name>.yaml.
+
+    Also removes stale formulas that no longer correspond to a synced repo.
+    """
+    # Build set of expected formula paths
+    expected_paths: set[pathlib.Path] = set()
     for formula in formulas:
         owner = formula["owner"]
         name = formula["name"]
         owner_dir = output_dir / "stacks" / owner
         owner_dir.mkdir(parents=True, exist_ok=True)
         formula_path = owner_dir / f"{name}.yaml"
+        expected_paths.add(formula_path)
         # Preserve version/tag from existing formula (set by tagger)
         if formula_path.exists():
             existing = yaml.safe_load(formula_path.read_text()) or {}
@@ -97,6 +103,18 @@ def write_formulas(output_dir: pathlib.Path, formulas: list[dict]) -> None:
         with open(formula_path, "w") as f:
             yaml.dump(formula, f, default_flow_style=False, sort_keys=False,
                       allow_unicode=True)
+
+    # Remove stale formulas that no longer match any repo in the org
+    stacks_dir = output_dir / "stacks"
+    if stacks_dir.exists():
+        for stale in sorted(stacks_dir.rglob("*.yaml")):
+            if stale not in expected_paths:
+                print(f"  Removing stale formula: {stale}")
+                stale.unlink()
+        # Clean up empty owner directories
+        for owner_dir in sorted(stacks_dir.iterdir()):
+            if owner_dir.is_dir() and not any(owner_dir.iterdir()):
+                owner_dir.rmdir()
 
 
 def _api_get(url: str, token: str | None = None) -> dict | list | None:
