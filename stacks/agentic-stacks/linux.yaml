@@ -1,9 +1,9 @@
 name: linux
 owner: agentic-stacks
-version: 0.0.1
+version: 2026.0402.1
 category: other
 repository: https://github.com/agentic-stacks/linux
-tag: v0.0.1
+tag: v2026.0402.1
 description: OS-level operations — systemd, networking, storage, performance tuning
 target:
   software: linux

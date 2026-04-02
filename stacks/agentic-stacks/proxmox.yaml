@@ -1,9 +1,9 @@
 name: proxmox
 owner: agentic-stacks
-version: 0.0.1
+version: 2026.0402.1
 category: platform
 repository: https://github.com/agentic-stacks/proxmox
-tag: v0.0.1
+tag: v2026.0402.1
 description: Hypervisor management — VM lifecycle, storage, networking, clustering
 target:
   software: proxmox

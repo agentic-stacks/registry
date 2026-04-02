@@ -1,9 +1,9 @@
 name: minio
 owner: agentic-stacks
-version: 0.0.1
+version: 2026.0402.1
 category: storage
 repository: https://github.com/agentic-stacks/minio
-tag: v0.0.1
+tag: v2026.0402.1
 description: S3-compatible object storage — deployment, buckets, replication, monitoring
 target:
   software: minio
