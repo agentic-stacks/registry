@@ -1,9 +1,9 @@
 name: openstack-kolla
 owner: agentic-stacks
-version: 2026.0331.2
+version: 2026.0402.1
 category: platform
 repository: https://github.com/agentic-stacks/openstack-kolla
-tag: v2026.0331.2
+tag: v2026.0402.1
 description: 'Agent-driven OpenStack cloud deployment and operations using kolla-ansible.
   Covers the full lifecycle: configuration, deployment, health checking, troubleshooting,
   and day-two operations on Rocky Linux 10+ and Ubuntu 24.04.'
