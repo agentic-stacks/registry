@@ -21,8 +21,25 @@ import yaml
 
 
 CATEGORY_RULES = {
-    "hardware": ["hardware-", "dell", "hpe", "supermicro", "idrac", "ilo", "bmc", "ipmi"],
-    "platform": ["openstack", "kubernetes", "k8s", "talos", "docker", "proxmox", "nomad"],
+    "hardware": [
+        "hardware-",
+        "dell",
+        "hpe",
+        "supermicro",
+        "idrac",
+        "ilo",
+        "bmc",
+        "ipmi",
+    ],
+    "platform": [
+        "openstack",
+        "kubernetes",
+        "k8s",
+        "talos",
+        "docker",
+        "proxmox",
+        "nomad",
+    ],
     "storage": ["ceph", "minio", "zfs", "nfs", "gluster", "longhorn"],
     "networking": ["ipxe", "pxe", "opnsense", "pfsense", "frr", "bgp", "dns", "dhcp"],
     "observability": ["prometheus", "grafana", "loki", "jaeger", "datadog"],
@@ -51,10 +68,12 @@ def manifest_to_formula(manifest: dict[str, Any]) -> dict[str, Any]:
     # Strip 'entry' from skills — formulas only need name + description
     skills = []
     for skill in manifest.get("skills", []):
-        skills.append({
-            "name": skill["name"],
-            "description": skill.get("description", ""),
-        })
+        skills.append(
+            {
+                "name": skill["name"],
+                "description": skill.get("description", ""),
+            }
+        )
 
     # Flatten tools to just names if they're dicts
     requires = dict(manifest.get("requires", {}))
@@ -70,7 +89,8 @@ def manifest_to_formula(manifest: dict[str, Any]) -> dict[str, Any]:
         "owner": owner,
         "version": str(version),
         "category": category,
-        "repository": manifest.get("repository") or f"https://github.com/{owner}/{name}",
+        "repository": manifest.get("repository")
+        or f"https://github.com/{owner}/{name}",
         "tag": f"v{version}",
         "description": manifest.get("description", "").strip(),
         "target": manifest.get("target", {}),
@@ -101,8 +121,13 @@ def write_formulas(output_dir: pathlib.Path, formulas: list[dict]) -> None:
                 formula["version"] = existing["version"]
                 formula["tag"] = existing.get("tag", f"v{existing['version']}")
         with open(formula_path, "w") as f:
-            yaml.dump(formula, f, default_flow_style=False, sort_keys=False,
-                      allow_unicode=True)
+            yaml.dump(
+                formula,
+                f,
+                default_flow_style=False,
+                sort_keys=False,
+                allow_unicode=True,
+            )
 
     # Remove stale formulas that no longer match any repo in the org
     stacks_dir = output_dir / "stacks"
@@ -143,8 +168,7 @@ def fetch_repos(org: str, token: str | None = None) -> list[str]:
     repos = []
     page = 1
     while True:
-        url = (f"https://api.github.com/orgs/{org}/repos"
-               f"?per_page=100&page={page}")
+        url = f"https://api.github.com/orgs/{org}/repos?per_page=100&page={page}"
         data = _api_get(url, token=token)
         if data is None:
             print(f"  API request failed for page {page}", file=sys.stderr)
@@ -172,10 +196,16 @@ def fetch_manifest(org: str, repo: str, token: str | None = None) -> dict | None
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Sync registry formulas from GitHub org")
+    parser = argparse.ArgumentParser(
+        description="Sync registry formulas from GitHub org"
+    )
     parser.add_argument("--org", default="agentic-stacks", help="GitHub org to scan")
-    parser.add_argument("--output", default=".", help="Output directory (registry repo root)")
-    parser.add_argument("--token", default=None, help="GitHub token (optional, for rate limits)")
+    parser.add_argument(
+        "--output", default=".", help="Output directory (registry repo root)"
+    )
+    parser.add_argument(
+        "--token", default=None, help="GitHub token (optional, for rate limits)"
+    )
     args = parser.parse_args()
 
     output_dir = pathlib.Path(args.output)
@@ -189,6 +219,9 @@ def main():
         manifest = fetch_manifest(args.org, repo, args.token)
         if manifest:
             formula = manifest_to_formula(manifest)
+            if not formula.get("skills"):
+                print(f"  {repo} — no skills, skipping")
+                continue
             formulas.append(formula)
         else:
             print(f"  {repo} — no stack.yaml, skipping")
