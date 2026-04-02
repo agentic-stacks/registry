@@ -1,0 +1,72 @@
+name: openstack-core
+owner: agentic-stacks
+version: 0.0.1
+category: platform
+repository: https://github.com/agentic-stacks/openstack-core
+tag: v0.0.1
+description: Comprehensive operational knowledge for all major OpenStack services.
+  Covers architecture, deployment, CLI/API operations, service internals, and day-two
+  management across OpenStack 2025.1 (Epoxy) through 2026.1. Targets both operators
+  managing production clouds and developers building on OpenStack APIs.
+target:
+  software: openstack
+  versions:
+  - '2025.1'
+  - '2025.2'
+  - '2026.1'
+skills:
+- name: architecture
+  description: Overall OpenStack architecture, message bus, DB, API patterns
+- name: deployment-overview
+  description: Deployment methods overview with references to deployment stacks
+- name: configuration
+  description: 'Common config patterns: oslo.config, paste.ini, policy.yaml'
+- name: identity
+  description: 'Keystone: authentication, authorization, federation, catalog'
+- name: compute
+  description: 'Nova + Placement: instances, scheduling, migrations, resource tracking'
+- name: networking
+  description: 'Neutron: networks, routers, security groups, ML2, OVS, OVN'
+- name: block-storage
+  description: 'Cinder: volumes, snapshots, backups, multi-backend, replication'
+- name: image
+  description: 'Glance: image management, stores, import workflows'
+- name: object-storage
+  description: 'Swift: containers, objects, rings, replication, erasure coding'
+- name: shared-filesystem
+  description: 'Manila: shared filesystem management, share types, drivers'
+- name: heat
+  description: 'Heat: stack orchestration, templates, environments, convergence'
+- name: magnum
+  description: 'Magnum: Kubernetes cluster provisioning on OpenStack'
+- name: load-balancing
+  description: 'Octavia: load balancers, listeners, pools, health monitors, amphora'
+- name: dns
+  description: 'Designate: DNS zones, recordsets, reverse DNS, backend drivers'
+- name: bare-metal
+  description: 'Ironic: bare metal provisioning, inspection, cleaning, drivers'
+- name: security
+  description: 'Barbican + cross-cutting: secrets, certificates, TLS, RBAC, hardening'
+- name: dashboard
+  description: 'Horizon and Skyline: web dashboards, configuration, customization'
+- name: health-check
+  description: Cross-service health verification
+- name: upgrades
+  description: Release upgrades including SLURP paths (2025.1 -> 2026.1)
+- name: backup-restore
+  description: Database and config backup strategies
+- name: capacity-planning
+  description: Quota management and resource planning
+- name: diagnose
+  description: Symptom-based troubleshooting decision trees
+- name: decision-guides
+  description: Choose between networking, storage, dashboard, and deployment options
+- name: compatibility
+  description: Service version matrix, Python versions, DB compatibility
+- name: known-issues
+  description: Version-specific bugs and workarounds
+depends_on: []
+requires:
+  tools:
+  - openstack
+  - python-openstackclient
