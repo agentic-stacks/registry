@@ -1,0 +1,15 @@
+name: minio
+owner: agentic-stacks
+version: 0.0.1
+category: storage
+repository: https://github.com/agentic-stacks/minio
+tag: v0.0.1
+description: S3-compatible object storage — deployment, buckets, replication, monitoring
+target:
+  software: minio
+  versions: []
+skills: []
+depends_on: []
+requires:
+  tools: []
+  python: '>=3.11'

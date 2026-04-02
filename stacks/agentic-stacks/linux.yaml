@@ -1,0 +1,15 @@
+name: linux
+owner: agentic-stacks
+version: 0.0.1
+category: other
+repository: https://github.com/agentic-stacks/linux
+tag: v0.0.1
+description: OS-level operations — systemd, networking, storage, performance tuning
+target:
+  software: linux
+  versions: []
+skills: []
+depends_on: []
+requires:
+  tools: []
+  python: '>=3.11'
