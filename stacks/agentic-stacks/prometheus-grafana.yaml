@@ -1,9 +1,9 @@
 name: prometheus-grafana
 owner: agentic-stacks
-version: 2026.0401.1
+version: 2026.0402.1
 category: observability
 repository: https://github.com/agentic-stacks/prometheus-grafana
-tag: v2026.0401.1
+tag: v2026.0402.1
 description: Monitoring stack — teaches AI agents to deploy, configure, operate, and
   troubleshoot Prometheus metrics collection, Grafana dashboards, Alertmanager notifications,
   and the exporter ecosystem.

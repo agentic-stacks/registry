@@ -1,9 +1,9 @@
 name: docker
 owner: agentic-stacks
-version: 2026.0402.1
+version: 2026.0402.2
 category: platform
 repository: https://github.com/agentic-stacks/docker
-tag: v2026.0402.1
+tag: v2026.0402.2
 description: Complete operational knowledge for building, deploying, managing, and
   troubleshooting production containerized applications using Docker Engine. Covers
   the full lifecycle from Dockerfile authoring and image optimization through single-host

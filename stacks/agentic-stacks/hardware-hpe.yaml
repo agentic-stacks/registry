@@ -1,9 +1,9 @@
 name: hardware-hpe
 owner: agentic-stacks
-version: 2026.0402.2
+version: 2026.0402.3
 category: hardware
 repository: https://github.com/agentic-stacks/hardware-hpe
-tag: v2026.0402.2
+tag: v2026.0402.3
 description: Complete operational knowledge for administering HPE ProLiant Gen10 and
   Gen11 servers. Covers the full lifecycle — discovery, BIOS/RAID/network configuration,
   firmware management, health monitoring, troubleshooting, and decommissioning — using

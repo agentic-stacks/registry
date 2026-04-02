@@ -1,9 +1,9 @@
 name: ceph
 owner: agentic-stacks
-version: 2026.0402.1
+version: 2026.0402.2
 category: storage
 repository: https://github.com/agentic-stacks/ceph
-tag: v2026.0402.1
+tag: v2026.0402.2
 description: Complete operational knowledge for deploying, managing, and operating
   production Ceph storage clusters using cephadm on bare metal. Covers RBD, CephFS,
   and RGW services across Ceph Reef (18.2.x) and Squid (19.2.x).

@@ -1,9 +1,9 @@
 name: openstack-core
 owner: agentic-stacks
-version: 2026.0402.1
+version: 2026.0402.2
 category: platform
 repository: https://github.com/agentic-stacks/openstack-core
-tag: v2026.0402.1
+tag: v2026.0402.2
 description: Comprehensive operational knowledge for all major OpenStack services.
   Covers architecture, deployment, CLI/API operations, service internals, and day-two
   management across OpenStack 2025.1 (Epoxy) through 2026.1. Targets both operators
