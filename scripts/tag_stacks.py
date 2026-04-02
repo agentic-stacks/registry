@@ -122,7 +122,17 @@ def main():
         last_tag, last_sha = get_latest_tag(owner, repo, args.token)
 
         if last_sha == head_sha:
-            print(f"  {name}: up to date ({last_tag})")
+            # Sync existing tag version into formula (handles renamed repos
+            # where the formula file is new but the repo already has a tag)
+            if last_tag and formula.get("version") in (None, "0.0.1"):
+                tag_version = last_tag.lstrip("v")
+                formula["version"] = tag_version
+                formula["tag"] = last_tag
+                with open(formula_path, "w") as f:
+                    yaml.dump(formula, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+                print(f"  {name}: synced version from existing tag ({last_tag})")
+            else:
+                print(f"  {name}: up to date ({last_tag})")
             continue
 
         version = next_version(owner, repo, args.token)
