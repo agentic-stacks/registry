@@ -14,6 +14,8 @@ target:
   - iLO 5 (Gen10)
   - iLO 6 (Gen11)
 skills:
+- name: training
+  description: Interactive training — teaches this stack's domain to new users
 - name: concepts
   description: iLO architecture, Redfish API model, OneView concepts, HPE terminology
 - name: connectivity

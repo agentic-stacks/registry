@@ -15,6 +15,8 @@ target:
   - ansible 9.x
   - ansible 10.x
 skills:
+- name: training
+  description: Interactive training — teaches this stack's domain to new users
 - name: concepts
   description: How Ansible works — control node, push model, idempotency, facts
 - name: installation

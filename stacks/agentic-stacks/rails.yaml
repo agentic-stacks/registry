@@ -13,6 +13,8 @@ target:
   - 7.x
   - 8.x
 skills:
+- name: training
+  description: Interactive training — teaches this stack's domain to new users
 - name: bootstrap
   description: Install Ruby, Rails, Bundler, Node — from zero to ready-to-develop
 - name: concepts

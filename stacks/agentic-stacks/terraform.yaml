@@ -12,6 +12,8 @@ target:
   versions:
   - '>=1.5'
 skills:
+- name: training
+  description: Interactive training — teaches this stack's domain to new users
 - name: concepts
   description: HCL language, Terraform architecture, provider model, state model,
     module system

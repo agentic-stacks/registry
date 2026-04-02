@@ -14,6 +14,8 @@ target:
   - 10.x
   - 9.x
 skills:
+- name: training
+  description: Interactive training — teaches this stack's domain to new users
 - name: architecture
   description: FRR architecture — zebra, daemon model, IPC, routing table lifecycle
 - name: configuration
