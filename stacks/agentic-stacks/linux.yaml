@@ -1,0 +1,85 @@
+name: linux
+owner: agentic-stacks
+version: 0.0.1
+category: other
+repository: https://github.com/agentic-stacks/linux
+tag: v0.0.1
+description: Comprehensive Linux systems administration — from installation through
+  day-two operations. Covers systemd, networking, storage, security, performance tuning,
+  and diagnostics. Distribution-agnostic core with Debian/Ubuntu and RHEL/Fedora specifics
+  where tooling diverges.
+target:
+  software: linux
+  versions:
+  - kernel 5.x+
+  - systemd 245+
+skills:
+- name: architecture
+  description: Kernel, userspace, boot process, runlevels and targets
+- name: filesystem
+  description: Filesystem hierarchy, mount points, /proc, /sys, /dev
+- name: shell
+  description: Bash fundamentals, redirection, pipes, job control
+- name: partitioning
+  description: GPT/MBR, partition schemes, fdisk/gdisk/parted
+- name: bootloader
+  description: GRUB2, systemd-boot, UEFI vs BIOS
+- name: distro-install
+  description: Debian/Ubuntu and RHEL/Fedora installation, automated installs
+- name: systemd
+  description: Units, targets, timers, dependencies, journald configuration
+- name: networking
+  description: ip/ss, netplan, NetworkManager, DNS, routing, bonding, VLANs
+- name: storage
+  description: LVM, mdadm, ext4/xfs/btrfs, fstab, swap
+- name: users
+  description: Users, groups, PAM, sudo, NSS
+- name: packages
+  description: apt/dpkg, dnf/rpm, repositories, pinning
+- name: processes
+  description: Process management, signals, nice, job control
+- name: logging
+  description: journalctl, rsyslog, log rotation, remote logging
+- name: scheduling
+  description: cron, systemd timers, at
+- name: monitoring
+  description: vmstat, iostat, sar, /proc metrics
+- name: backup
+  description: rsync, tar, dd, snapshot strategies
+- name: firewall
+  description: nftables, iptables (legacy), ufw, firewalld
+- name: access-control
+  description: SELinux, AppArmor, capabilities, ACLs
+- name: ssh
+  description: SSH config hardening, keys, agent forwarding, tunnels
+- name: certificates
+  description: OpenSSL, CA management, Let's Encrypt
+- name: kernel-tuning
+  description: sysctl, hugepages, NUMA, scheduler tuning
+- name: resource-limits
+  description: cgroups v2, ulimits, systemd resource control
+- name: profiling
+  description: perf, strace, eBPF basics, I/O scheduling
+- name: boot-failures
+  description: GRUB rescue, initramfs, emergency mode troubleshooting
+- name: network-issues
+  description: Connectivity, DNS, routing, firewall debugging
+- name: disk-issues
+  description: fsck, SMART, I/O bottlenecks, full disk recovery
+- name: performance-issues
+  description: CPU/memory/IO triage and resolution
+- name: known-issues
+  description: Distro-specific gotchas and workarounds
+- name: compatibility
+  description: Kernel version feature matrix
+- name: command-reference
+  description: Modern command to legacy equivalent lookup
+- name: training
+  description: Interactive training — teaches Linux administration to new users
+depends_on: []
+requires:
+  tools:
+  - ssh
+  - systemctl
+  - ip
+  - journalctl
