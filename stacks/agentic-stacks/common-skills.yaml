@@ -1,0 +1,26 @@
+name: common-skills
+owner: agentic-stacks
+version: 0.0.1
+category: other
+repository: https://github.com/agentic-stacks/common-skills
+tag: v0.0.1
+description: Cross-cutting skills for all agentic stacks projects — interactive training,
+  guided walkthroughs, project orientation, and operational feedback capture.
+target:
+  software: agentic-stacks
+  versions:
+  - all
+skills:
+- name: training
+  description: Interactive training — teaches domain knowledge from any pulled stack
+- name: guide
+  description: Wizard-style guided walkthroughs — assesses environment, builds tailored
+    plans
+- name: orientation
+  description: Project overview — reads all pulled stacks and summarizes capabilities
+- name: feedback
+  description: Capture operational learnings and write them to domain stacks for upstream
+    contribution
+depends_on: []
+requires:
+  tools: []

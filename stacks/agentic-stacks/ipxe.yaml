@@ -13,8 +13,6 @@ target:
   versions:
   - rolling
 skills:
-- name: training
-  description: Interactive training — teaches this stack's domain to new users
 - name: concepts
   description: iPXE architecture, capabilities, and how it relates to PXE/gPXE
 - name: building

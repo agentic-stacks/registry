@@ -14,8 +14,6 @@ target:
   - iDRAC9 (14G/15G/16G)
   - iDRAC10 (17G)
 skills:
-- name: training
-  description: Interactive training — teaches this stack's domain to new users
 - name: concepts
   description: PowerEdge architecture, iDRAC fundamentals, server generations, license
     tiers

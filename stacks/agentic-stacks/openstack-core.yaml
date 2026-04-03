@@ -15,8 +15,6 @@ target:
   - '2025.2'
   - '2026.1'
 skills:
-- name: training
-  description: Interactive training — teaches this stack's domain to new users
 - name: architecture
   description: Overall OpenStack architecture, message bus, DB, API patterns
 - name: deployment-overview

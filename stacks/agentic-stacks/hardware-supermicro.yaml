@@ -16,8 +16,6 @@ target:
   - X12 (Xeon Scalable Gen 3)
   - X13 (Xeon Scalable Gen 4/5)
 skills:
-- name: training
-  description: Interactive training — teaches this stack's domain to new users
 - name: concepts
   description: Supermicro architecture, X11/X12/X13 platforms, BMC fundamentals, Redfish
     API

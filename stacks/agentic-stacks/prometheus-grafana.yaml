@@ -15,8 +15,6 @@ target:
   - grafana-12.x
   - grafana-11.x
 skills:
-- name: training
-  description: Interactive training — teaches this stack's domain to new users
 - name: concepts
   description: Metrics model, time series, labels, metric types, PromQL preview
 - name: architecture

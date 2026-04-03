@@ -13,8 +13,6 @@ target:
   versions:
   - 27.x
 skills:
-- name: training
-  description: Interactive training — teaches this stack's domain to new users
 - name: concepts
   description: Docker architecture, containerd, OCI runtimes, image layers, namespaces/cgroups
 - name: installation

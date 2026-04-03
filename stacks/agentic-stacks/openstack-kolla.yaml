@@ -13,8 +13,6 @@ target:
   - '2025.1'
   - '2025.2'
 skills:
-- name: training
-  description: Interactive training — teaches this stack's domain to new users
 - name: config-build
   description: Build globals.yml, inventory, and service configs from operator requirements
 - name: deploy
