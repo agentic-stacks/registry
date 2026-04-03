@@ -1,9 +1,9 @@
 name: hardware-supermicro
 owner: agentic-stacks
-version: 2026.0402.3
+version: 2026.0403.1
 category: hardware
 repository: https://github.com/agentic-stacks/hardware-supermicro
-tag: v2026.0402.3
+tag: v2026.0403.1
 description: Teaches AI agents to manage Supermicro server hardware — BMC configuration,
   BIOS management, RAID setup, firmware updates, and hardware inventory. Covers X11/X12/X13
   platforms with Redfish BMC support. Includes an optional container-based toolkit

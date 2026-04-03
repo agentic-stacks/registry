@@ -1,9 +1,9 @@
 name: kubernetes-talos
 owner: agentic-stacks
-version: 2026.0402.2
+version: 2026.0403.1
 category: platform
 repository: https://github.com/agentic-stacks/kubernetes-talos
-tag: v2026.0402.2
+tag: v2026.0403.1
 description: Complete operational knowledge for deploying, managing, and operating
   production Kubernetes clusters using Talos Linux. Covers bare metal, virtualized,
   and cloud deployments with full platform stack guidance.

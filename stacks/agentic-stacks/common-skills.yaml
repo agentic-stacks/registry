@@ -1,9 +1,9 @@
 name: common-skills
 owner: agentic-stacks
-version: 0.0.1
+version: 2026.0403.1
 category: other
 repository: https://github.com/agentic-stacks/common-skills
-tag: v0.0.1
+tag: v2026.0403.1
 description: Cross-cutting skills for all agentic stacks projects — interactive training,
   guided walkthroughs, project orientation, and operational feedback capture.
 target:
