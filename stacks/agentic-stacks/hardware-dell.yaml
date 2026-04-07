@@ -1,9 +1,9 @@
 name: hardware-dell
 owner: agentic-stacks
-version: 2026.0407.2
+version: 2026.0407.3
 category: hardware
 repository: https://github.com/agentic-stacks/hardware-dell
-tag: v2026.0407.2
+tag: v2026.0407.3
 description: Teaches AI agents to manage Dell PowerEdge server hardware — BIOS configuration,
   iDRAC remote management, RAID setup, firmware updates, and hardware inventory. Includes
   a container-based toolkit (racadm, perccli, mvcli, Ansible OpenManage) so operators
