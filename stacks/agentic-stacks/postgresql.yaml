@@ -1,0 +1,75 @@
+name: postgresql
+owner: agentic-stacks
+version: 0.0.1
+category: other
+repository: https://github.com/agentic-stacks/postgresql
+tag: v0.0.1
+description: 'Agent-driven PostgreSQL deployment and operations covering the full
+  lifecycle: installation, configuration, high availability, backup/restore, performance
+  tuning, security, and day-two operations across bare metal, containerized, and Kubernetes
+  environments.'
+target:
+  software: postgresql
+  versions:
+  - '16'
+  - '17'
+skills:
+- name: concepts
+  description: PostgreSQL architecture, process model, MVCC, WAL, storage layout
+- name: installation
+  description: Installing PostgreSQL on bare metal/VM (apt, yum, source) and Docker/Podman
+- name: configuration
+  description: postgresql.conf, pg_hba.conf, resource tuning baselines, SSL/TLS setup
+- name: standalone
+  description: Single-server production deployment — init, config, verification
+- name: containerized
+  description: Docker/Podman deployment patterns, volumes, networking, compose
+- name: kubernetes
+  description: CloudNativePG, Crunchy PGO, Zalando operator deployment and management
+- name: replication
+  description: Streaming replication, logical replication, cascading, synchronous
+    modes
+- name: ha
+  description: Patroni + etcd/Consul HA clusters, automatic failover, fencing
+- name: connection-pooling
+  description: PgBouncer, PgCat — installation, configuration, pool modes
+- name: observability
+  description: pg_stat views, Prometheus/pg_exporter/Grafana, pgBadger, pgAudit
+- name: security
+  description: Roles/privileges, RLS, LDAP/SCRAM auth, pgcrypto, encryption, compliance
+    patterns
+- name: backup-restore
+  description: pgBackRest, pg_dump/pg_restore, pg_basebackup, Barman, PITR
+- name: upgrades
+  description: Minor upgrades, pg_upgrade major version, logical replication upgrade
+    path
+- name: health-check
+  description: Cluster validation — connections, replication, disk, locks, bloat
+- name: performance
+  description: postgresql.conf tuning, EXPLAIN analysis, indexing, partitioning, vacuum
+    tuning, pgbench
+- name: schema-management
+  description: Migration tools (Flyway, sqitch, Alembic, golang-migrate), schema diffing,
+    patterns
+- name: troubleshooting
+  description: Symptom-based diagnostic decision trees — connections, slow queries,
+    replication, crashes
+- name: decision-guides
+  description: Comparison matrices for HA, backup tools, K8s operators, migration
+    tools, poolers, auth methods
+- name: compatibility
+  description: PostgreSQL version × OS × extension × tooling compatibility
+- name: known-issues
+  description: Version-specific bugs, caveats, and workarounds for PG 16 and 17
+depends_on: []
+requires:
+  tools:
+  - psql
+  - pg_isready
+  - patronictl
+  - pgbackrest
+  - pg_dump
+  - pgbench
+  - docker
+  - kubectl
+  - helm
