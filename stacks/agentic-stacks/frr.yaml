@@ -1,9 +1,9 @@
 name: frr
 owner: agentic-stacks
-version: 2026.0403.1
+version: 2026.0408.1
 category: networking
 repository: https://github.com/agentic-stacks/frr
-tag: v2026.0403.1
+tag: v2026.0408.1
 description: Teaches AI agents to deploy, configure, operate, troubleshoot, and develop
   FRR (Free Range Routing). Covers all routing protocols (BGP, OSPF, IS-IS, RIP, PIM,
   LDP, BFD, Babel, PBR, OpenFabric, VRRP, EIGRP, NHRP), multiple deployment models

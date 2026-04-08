@@ -1,9 +1,9 @@
 name: terraform
 owner: agentic-stacks
-version: 2026.0403.1
+version: 2026.0408.1
 category: automation
 repository: https://github.com/agentic-stacks/terraform
-tag: v2026.0403.1
+tag: v2026.0408.1
 description: 'Infrastructure as Code provisioning — teaches AI agents to operate Terraform
   and OpenTofu across the full lifecycle: project setup, provider configuration, state
   management, modules, CI/CD integration, upgrades, and troubleshooting.'

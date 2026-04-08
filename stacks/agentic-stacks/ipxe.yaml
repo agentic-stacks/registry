@@ -1,9 +1,9 @@
 name: ipxe
 owner: agentic-stacks
-version: 2026.0403.1
+version: 2026.0408.1
 category: networking
 repository: https://github.com/agentic-stacks/ipxe
-tag: v2026.0403.1
+tag: v2026.0408.1
 description: Teaches agents to build, deploy, and operate iPXE network boot infrastructure
   across bare metal, virtual, and cloud environments. Covers building from source,
   chainloading, ROM burning, DHCP integration, iPXE scripting, OS booting (Linux,

@@ -1,9 +1,9 @@
 name: postgresql
 owner: agentic-stacks
-version: 2026.0407.1
+version: 2026.0408.1
 category: other
 repository: https://github.com/agentic-stacks/postgresql
-tag: v2026.0407.1
+tag: v2026.0408.1
 description: 'Agent-driven PostgreSQL deployment and operations covering the full
   lifecycle: installation, configuration, high availability, backup/restore, performance
   tuning, security, and day-two operations across bare metal, containerized, and Kubernetes

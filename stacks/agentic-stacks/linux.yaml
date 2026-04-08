@@ -1,9 +1,9 @@
 name: linux
 owner: agentic-stacks
-version: 2026.0403.1
+version: 2026.0408.1
 category: other
 repository: https://github.com/agentic-stacks/linux
-tag: v2026.0403.1
+tag: v2026.0408.1
 description: Comprehensive Linux systems administration — from installation through
   day-two operations. Covers systemd, networking, storage, security, performance tuning,
   and diagnostics. Distribution-agnostic core with Debian/Ubuntu and RHEL/Fedora specifics

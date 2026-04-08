@@ -1,9 +1,9 @@
 name: rails
 owner: agentic-stacks
-version: 2026.0407.1
+version: 2026.0408.1
 category: other
 repository: https://github.com/agentic-stacks/rails
-tag: v2026.0407.1
+tag: v2026.0408.1
 description: Ruby on Rails full-stack and API-only web application framework. Covers
   Rails 7.x and 8.x — from app creation through models, controllers, views, Hotwire,
   testing, security, performance, and troubleshooting.
